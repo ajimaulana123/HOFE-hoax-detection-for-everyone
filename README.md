@@ -1,49 +1,79 @@
-# HOFE ( Hoax Detection For Everyone )
+### HOFE Model - Hoax and Fake News Detection using RNN
 
-> Need image
+#### Model Name: **HOFE (Hoax and Fake News Detection Model)**
 
-## Background
+#### Description:
+The **HOFE** model is a hoax detection model built using **RNN** (Recurrent Neural Network) architecture, which is widely used for sequence modeling tasks such as natural language processing. This model is designed to classify news articles or information as either "fake news" or "real news" based on the provided text. HOFE leverages the power of RNNs to understand the sequential nature of text, capturing contextual relationships between words and phrases within a news article to identify fake news patterns.
 
-Our project seeks to develop a Hoax Detection application, targeting the critical challenge of misinformation that pervades Indonesian media landscapes. Our problem statement focuses on the need for an automated and intelligent application capable of detecting and reducing the spread of misinformation, which increasingly threatens social harmony and public trust in vital areas such as health and governance. Although there are already similar applications available, we aim to achieve a highly reliable hoax detection accuracy. Through our research questions, we aim to determine the efficacy of machine learning algorithms in detecting hoaxes in real time and to identify key linguistic and contextual features that distinguish misinformation. Additionally, we investigate the broader implications of hoaxes on public opinion and decision-making.
+#### Approach:
+- **RNN (Recurrent Neural Network)**: The **HOFE** model utilizes an RNN architecture, which is designed to work with sequences of data. RNNs are effective in text classification tasks because they can learn the dependencies between words and phrases in a sentence. However, unlike LSTM or GRU, vanilla RNNs can struggle with long-range dependencies, but they still perform well for many text classification tasks when combined with techniques like tokenization and padding.
 
-In terms of background, Indonesia is witnessing a surge in hoaxes, with studies showing that a large portion of the population is exposed to false information, primarily through news articles. This unchecked spread has spurred public uncertainty and, in some cases, social unrest—particularly around health crises like COVID-19 and sensitive political events.
-This tool will empower individuals to distinguish between truth and falsehood, promoting informed public discourse, bolstering confidence in credible news sources, and contributing to a well-informed society. This initiative reflects our commitment to addressing the misinformation crisis and to advancing media literacy through actionable technology.
+- **Dataset**: The dataset used to train the **HOFE** model consists of hoax news and real news articles that have been cleaned and preprocessed to ensure data quality and diversity.
 
-## Main Features
+- **Training Process**: The model is trained using an RNN-based architecture. The training process involves tokenizing the text, padding sequences to ensure uniform input lengths, and optimizing the model's performance using the Adam optimizer. The model is evaluated based on accuracy, precision, and recall metrics, which help measure its effectiveness in detecting fake news.
 
-#### 1. **Predict News**
-Submit a **news link** and get a prediction about whether the news is a **hoax** or **valid**. This is the main feature of HOFE, providing you with an instant check on news authenticity.
+#### Steps for Creation:
+1. **Data Preprocessing**: The text from news articles is preprocessed by removing irrelevant characters, lowercasing all words, and performing stemming to get their base forms.
+2. **Tokenization and Padding**: The preprocessed text is tokenized, where each word is converted into a sequence of numbers. The sequences are then padded to ensure that all input sequences are of uniform length.
+3. **Model Training**: The RNN-based model is trained on the tokenized and padded text data. The model typically includes one or more RNN layers followed by dense layers for classification. The training process uses a split dataset consisting of training, validation, and testing sets.
+4. **Evaluation and Testing**: After training, the model is evaluated on the test set to measure its accuracy, precision, and recall in detecting fake news. The model is fine-tuned to improve performance if needed.
 
-#### 2. **Check Hoax News**
-View a list of **hoax news** that has been verified. Each entry includes the title, link, and description of the news article.
+#### Model Implementation:
+The model can be used to verify the authenticity of various types of news articles by requiring only the text of the article. Once the input text is provided, the model classifies whether the news is a hoax or real based on the patterns it has learned during training.
 
-#### 3. **Login**
-Login to the application using your **email** and **password**. You will receive a **token** that grants access to other features.
+#### Results:
+The **HOFE** model achieves strong performance in distinguishing fake news from real news. With accuracy rates ranging between 80-90% on the test dataset, the model shows promising potential in helping users verify circulating news. The model can be implemented in web or mobile applications, where users can input a news title or body to check its authenticity.
 
-#### 4. **Register**
-Create a new account with a **username**, **email**, and **password**. Once registered, you can log in and start using the app.
+---
 
-#### 5. **Logout**
-Log out of the app to securely end your session. Your **token** will be removed to ensure the safety of your account.
+### API Implementation for News Classification
 
-#### 6. **User Profile**
-View your **user profile**. Currently, the profile section is under development and shows "empty!"
+To integrate the **HOFE** model into an application or service, you can use the following API to make predictions based on a given news article. The API accepts the text of a news article and returns a prediction on whether the news is a hoax or real.
 
-## Our Team
+#### API Endpoint:
 
-| Name                               | University                        | Learning Path | LinkedIn                         |
-| ---------------------------------- | --------------------------------- | ------------- | -------------------------------- |
-| Ardhian Jaya Wibawa                | Politeknik Pratama Mulia          | ML            | [LinkedIn](https://www.linkedin.com/in/ardhian-jaya/)                          |   
-| Satyo Tri Hanggoro                 | Universitas Gunadarma             | CC            | [LinkedIn](https://www.linkedin.com/in/satyo-tri-hanggoro-a46a88227/)                    |
-| Aji Maulana                        | Politeknik Pratama Mulia          | ML            | [LinkedIn](https://www.linkedin.com/in/aji-maulana-0bb20921b)                    |
-| Seva Nonda Farkhan Syah            | Universitas Gunadarma             | ML            | [LinkedIn](https://www.linkedin.com/in/seva-nonda-farkhan-syah-0ab311247/)                    |
-| Zahra Areefa Ananta                | Institut Teknologi Sumatera       | ML            | [LinkedIn](https://www.linkedin.com/in/zahra-areefa-ananta-28566124b/)                    |
-| Bani Adam Tampubolon               | Institut Teknologi Sumatera       | ML            | [LinkedIn](https://www.linkedin.com/in/baniadamtampubolon)                    |
+**POST** `/api/news/predict`
 
+**Base URL**: `https://api-cc-hofe-production.up.railway.app`
 
-## Resource
-|  Learning Path                | Branch                               |
-|------------------------------ |--------|
-| Cloud-Computing               | [CC](https://github.com/SatyoTri/Self-Meter/tree/Cloud-Computing) |
-| Mobile Development            | [MD](https://github.com/SatyoTri/Self-Meter/tree/mobile-development) |
-| Machine-learning              | [ML](https://github.com/SatyoTri/Self-Meter/tree/Machine-Learning) |
+#### Request Format:
+The API accepts JSON formatted input containing the news article text.
+
+##### Example Request:
+
+```bash
+curl -X POST https://web-production-b9e1.up.railway.app/predict \
+  -H "Content-Type: application/json" \
+  -d '{
+    "text": "Kartu Tanda Penduduk (KTP) adalah dokumen identitas resmi yang wajib dimiliki oleh setiap Warga Negara Indonesia (WNI) berusia 17 tahun ke atas. Tidak hanya sebagai identitas diri, KTP juga digunakan untuk berbagai keperluan administrasi. Karena sering digunakan, KTP sering mengalami kerusakan fisik seperti patah, terkelupas, atau tidak dapat terbaca."
+  }'
+```
+
+#### Response Format:
+The response will include the prediction of the news article, indicating whether it is real or fake.
+
+##### Example Response:
+
+```json
+{
+  "prediction": "valid",
+  "text": "Kartu Tanda Penduduk (KTP) adalah dokumen identitas resmi yang wajib dimiliki oleh setiap Warga Negara Indonesia (WNI) berusia 17 tahun ke atas. Tidak hanya sebagai identitas diri, KTP juga digunakan untuk berbagai keperluan administrasi. Karena sering digunakan, KTP sering mengalami kerusakan fisik seperti patah, terkelupas, atau tidak dapat terbaca"
+}
+```
+
+#### Explanation:
+- **Request**: The text of the news article is sent in the body of the POST request under the key `"text"`.
+- **Response**: The API returns a JSON response with the key `"prediction"`, which will have the value `"real"` or `"fake"` based on the model's prediction.
+
+#### How to Use the API:
+1. **Send a POST request** to the endpoint with a valid news article text in JSON format.
+2. **Interpret the result**:
+   - `"valid"`: The model predicts the news article as real.
+   - `"fake"`: The model predicts the news article as fake.
+
+This API allows for seamless integration into web or mobile applications where users can input news content and receive immediate feedback on its authenticity.
+
+---
+
+### Summary of Changes:
+In this version of the **HOFE** model, we have replaced the **BERT** architecture with a more lightweight **RNN-based architecture**. The RNN model processes the sequential nature of text data and classifies news articles based on patterns learned during training. This makes the model effective for tasks like fake news detection, while being computationally less intensive than transformer-based models like BERT.
