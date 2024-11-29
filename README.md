@@ -1,49 +1,177 @@
-# HOFE ( Hoax Detection For Everyone )
+# Hoax Detection For Everyone (HOFE)
 
-> Need image
+**HOFE API** to detect fake news.
 
-## Background
+This API provides interfaces for registering, logging in, logging out, and verifying whether news is fake or not. Users can access the latest hoax news information and make predictions on specific news articles using their URLs. To access all endpoints, users must have a valid access token.
 
-Our project seeks to develop a Hoax Detection application, targeting the critical challenge of misinformation that pervades Indonesian media landscapes. Our problem statement focuses on the need for an automated and intelligent application capable of detecting and reducing the spread of misinformation, which increasingly threatens social harmony and public trust in vital areas such as health and governance. Although there are already similar applications available, we aim to achieve a highly reliable hoax detection accuracy. Through our research questions, we aim to determine the efficacy of machine learning algorithms in detecting hoaxes in real time and to identify key linguistic and contextual features that distinguish misinformation. Additionally, we investigate the broader implications of hoaxes on public opinion and decision-making.
+## Endpoints
 
-In terms of background, Indonesia is witnessing a surge in hoaxes, with studies showing that a large portion of the population is exposed to false information, primarily through news articles. This unchecked spread has spurred public uncertainty and, in some cases, social unrest—particularly around health crises like COVID-19 and sensitive political events.
-This tool will empower individuals to distinguish between truth and falsehood, promoting informed public discourse, bolstering confidence in credible news sources, and contributing to a well-informed society. This initiative reflects our commitment to addressing the misinformation crisis and to advancing media literacy through actionable technology.
+### User Login
 
-## Main Features
+> **POST** `/api/auth/login`
 
-#### 1. **Predict News**
-Submit a **news link** and get a prediction about whether the news is a **hoax** or **valid**. This is the main feature of HOFE, providing you with an instant check on news authenticity.
+#### Request Body
+```json
+{
+  "email": "string",  // Unique email address
+  "password": "string"  // User's password
+}
 
-#### 2. **Check Hoax News**
-View a list of **hoax news** that has been verified. Each entry includes the title, link, and description of the news article.
+#### Response Body
+```json
+{
+  "statusCode": 200,
+  "message": "Login successful",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5c..."
+}
+```
 
-#### 3. **Login**
-Login to the application using your **email** and **password**. You will receive a **token** that grants access to other features.
+#### Example use with cURL:
+```bash
+curl -X POST https://[our-api]/api/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{
+    "email": "johndoe@example.com",
+    "password": "securepassword123"
+  }'
+```
 
-#### 4. **Register**
-Create a new account with a **username**, **email**, and **password**. Once registered, you can log in and start using the app.
+---
 
-#### 5. **Logout**
-Log out of the app to securely end your session. Your **token** will be removed to ensure the safety of your account.
+### User Register
 
-#### 6. **User Profile**
-View your **user profile**. Currently, the profile section is under development and shows "empty!"
+> **POST** `/api/auth/register`
 
-## Our Team
+#### Request Body
+```json
+{
+  "username": "string",  // Unique username
+  "email": "string",     // Unique email address
+  "password": "string"   // User's password
+}
+```
 
-| Name                               | University                        | Learning Path | LinkedIn                         |
-| ---------------------------------- | --------------------------------- | ------------- | -------------------------------- |
-| Ardhian Jaya Wibawa                | Politeknik Pratama Mulia          | ML            | [LinkedIn](https://www.linkedin.com/in/ardhian-jaya/)                          |   
-| Satyo Tri Hanggoro                 | Universitas Gunadarma             | CC            | [LinkedIn](https://www.linkedin.com/in/satyo-tri-hanggoro-a46a88227/)                    |
-| Aji Maulana                        | Politeknik Pratama Mulia          | ML            | [LinkedIn](https://www.linkedin.com/in/aji-maulana-0bb20921b)                    |
-| Seva Nonda Farkhan Syah            | Universitas Gunadarma             | ML            | [LinkedIn](https://www.linkedin.com/in/seva-nonda-farkhan-syah-0ab311247/)                    |
-| Zahra Areefa Ananta                | Institut Teknologi Sumatera       | ML            | [LinkedIn](https://www.linkedin.com/in/zahra-areefa-ananta-28566124b/)                    |
-| Bani Adam Tampubolon               | Institut Teknologi Sumatera       | ML            | [LinkedIn](https://www.linkedin.com/in/baniadamtampubolon)                    |
+#### Response Body
+```json
+{
+  "statusCode": 201,
+  "message": "Registration successful",
+  "user": {
+    "username": "johndoe",
+    "email": "johndoe@example.com",
+    "password": "$2b$10$ZvxynoZlJfvB7eJcoS88neEhG2g0DTzgCOGhKQnxmyEEdx/t4P8ti"
+  }
+}
+```
 
+#### Example use with cURL:
+```bash
+curl -X POST https://[our-api]/api/auth/register \
+  -H "Content-Type: application/json" \
+  -d '{
+    "username": "johndoe",
+    "email": "johndoe@example.com",
+    "password": "securepassword123"
+  }'
+```
 
-## Resource
-|  Learning Path                | Branch                               |
-|------------------------------ |--------|
-| Cloud-Computing               | [CC](https://github.com/SatyoTri/Self-Meter/tree/Cloud-Computing) |
-| Mobile Development            | [MD](https://github.com/SatyoTri/Self-Meter/tree/mobile-development) |
-| Machine-learning              | [ML](https://github.com/SatyoTri/Self-Meter/tree/Machine-Learning) |
+---
+
+### User Logout
+
+> **GET** `/api/auth/logout`
+
+#### Headers
+- `Authorization`: `your_jwt_token_here` (token from login)
+
+#### Example use with cURL:
+```bash
+curl -X GET https://[our-api]/api/auth/logout -H "Authorization: your_jwt_token_here"
+```
+
+---
+
+### Get News
+
+> **GET** `/api/news`
+
+Retrieve news categorized as hoax.
+
+#### Headers
+- `Authorization`: `Bearer <your_access_token>` (token from login)
+
+#### Response Body
+```json
+[
+  {
+    "title": "SMP Student Kills Friend in Violent Attack",
+    "link": "https://turnbackhoax.id/2024/11/24/salah-siswa-smp-aniaya-teman-hingga-tewas/",
+    "date": "November 24, 2024",
+    "image": "https://turnbackhoax.id/wp-content/uploads/2024/11/WhatsApp-Image-2024-11-24-at-17.43.57-326x245.jpeg",
+    "content": "In reality, the victim is still alive and just unconscious during the incident.",
+    "category": "Hoax"
+  },
+  ...
+]
+```
+
+#### Example use with cURL:
+```bash
+curl -X GET https://[our-api]/api/news -H "Authorization: Bearer <your_access_token>"
+```
+
+---
+
+### Predict News
+
+> **POST** `/api/news/predict`
+
+Make a prediction on whether the news is a hoax or not.
+
+#### Headers
+- `Authorization`: `Bearer <your_access_token>` (token from login)
+
+#### Request Body
+```json
+{
+  "url": "string"  // URL of the news to be predicted
+}
+```
+
+#### Response Body
+```json
+{
+  "statusCode": 200,
+  "prediction": "Valid",  // or "Invalid" for hoax news
+  "text": "example news text"
+}
+```
+
+#### Example use with cURL:
+```bash
+curl -X POST https://[our-api]/api/news/predict \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NDM0Nzk4YTYyMTBiODcwOGEwYzI5NCIsInVzZXJuYW1lIjoiYWppbWF1bGFuYSIsImlhdCI6MTczMjQ2MjU3NCwiZXhwIjoxNzMyNDY2MTc0fQ.Smp5K2xeAv_7n3803Wnk4Sd-KeMLrWQI0yRoSfF-5Rc" \
+  -H "Content-Type: application/json" \
+  -d '{"url": "news-url"}'
+```
+
+---
+
+### User Profile
+
+> **GET** `/api/user/profile`
+
+#### Headers
+- `Authorization`: `Bearer <your_access_token>` (token from login)
+
+#### Response Body
+```json
+{
+  "is": "empty!"
+}
+```
+
+#### Example use with cURL:
+```bash
+curl -X GET https://[our-api]/api/user/profile -H "Authorization: Bearer <your_access_token>"
+```
