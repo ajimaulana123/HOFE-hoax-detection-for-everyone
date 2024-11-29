@@ -69,7 +69,7 @@ The response will include the prediction of the news article, indicating whether
 1. **Send a POST request** to the endpoint with a valid news article text in JSON format.
 2. **Interpret the result**:
    - `"valid"`: The model predicts the news article as real.
-   - `"fake"`: The model predicts the news article as fake.
+   - `"hoax"`: The model predicts the news article as hoax.
 
 This API allows for seamless integration into web or mobile applications where users can input news content and receive immediate feedback on its authenticity.
 
