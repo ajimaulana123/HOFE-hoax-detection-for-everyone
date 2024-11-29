@@ -34,7 +34,7 @@ To integrate the **HOFE** model into an application or service, you can use the 
 
 **POST** `/api/news/predict`
 
-**Base URL**: `https://api-cc-hofe-production.up.railway.app`
+**Base URL**: `https://[our-api]`
 
 #### Request Format:
 The API accepts JSON formatted input containing the news article text.
@@ -42,7 +42,7 @@ The API accepts JSON formatted input containing the news article text.
 ##### Example Request:
 
 ```bash
-curl -X POST https://web-production-b9e1.up.railway.app/predict \
+curl -X POST https://[our-api]/predict \
   -H "Content-Type: application/json" \
   -d '{
     "text": "Kartu Tanda Penduduk (KTP) adalah dokumen identitas resmi yang wajib dimiliki oleh setiap Warga Negara Indonesia (WNI) berusia 17 tahun ke atas. Tidak hanya sebagai identitas diri, KTP juga digunakan untuk berbagai keperluan administrasi. Karena sering digunakan, KTP sering mengalami kerusakan fisik seperti patah, terkelupas, atau tidak dapat terbaca."
