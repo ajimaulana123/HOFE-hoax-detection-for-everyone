@@ -44,6 +44,6 @@ View your **user profile**. Currently, the profile section is under development 
 ## Resource
 |  Learning Path                | Branch                               |
 |------------------------------ |--------|
-| Cloud-Computing               | [CC](https://github.com/SatyoTri/Self-Meter/tree/Cloud-Computing) |
-| Mobile Development            | [MD](https://github.com/SatyoTri/Self-Meter/tree/mobile-development) |
-| Machine-learning              | [ML](https://github.com/SatyoTri/Self-Meter/tree/Machine-Learning) |
+| Cloud-Computing               | [CC](https://github.com/ajimaulana123/HOFE-hoax-detection-for-everyone/tree/cc) |
+| Mobile Development            | [MD](https://github.com/ajimaulana123/HOFE-hoax-detection-for-everyone/tree/md) |
+| Machine-learning              | [ML](https://github.com/ajimaulana123/HOFE-hoax-detection-for-everyone/tree/ml) |
