@@ -37,7 +37,7 @@ View your **user profile**. Currently, the profile section is under development 
 | Aji Maulana                        | Politeknik Pratama Mulia          | ML 🧠         | [LinkedIn](https://www.linkedin.com/in/aji-maulana-0bb20921b)                    |
 | Seva Nonda Farkhan Syah            | Universitas Gunadarma             | ML 🧠         | [LinkedIn](https://www.linkedin.com/in/seva-nonda-farkhan-syah-0ab311247/)                    |
 | Zahra Areefa Ananta                | Institut Teknologi Sumatera       | ML 🧠         | [LinkedIn](https://www.linkedin.com/in/zahra-areefa-ananta-28566124b/)                    |
-| Bani Adam Tampubolon               | Institut Teknologi Sumatera       | ML 🧠         | [LinkedIn](https://www.linkedin.com/in/baniadamtampubolon)                    |
+| Drin Marsal Albari                 | Universitas Riau                  | ML 🧠         | [LinkedIn](https://www.linkedin.com/in/drin-marsal-a4a000332/)                    |
 
 ---
 
