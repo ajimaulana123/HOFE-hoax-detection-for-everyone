@@ -1,4 +1,4 @@
-### HOFE Model - Hoax and Fake News Detection using RNN
+### HOFE Model - Hoax and Fake News Detection using RNN -  <span style="color:red">v4</span>
 
 #### Model Name: **HOFE (Hoax and Fake News Detection Model)**
 
