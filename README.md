@@ -34,7 +34,7 @@ View your **user profile**. Currently, the profile section is under development 
 | Name                               | University                        | Learning Path | LinkedIn                         |
 | ---------------------------------- | --------------------------------- | ------------- | -------------------------------- |
 | Ardhian Jaya Wibawa                | Politeknik Pratama Mulia          | ML            | [LinkedIn](https://www.linkedin.com/in/ardhian-jaya/)                          |   
-| Satyo Tri Hanggoro                 | Universitas Gunadarma             | CC            | [LinkedIn](https://www.linkedin.com/in/satyo-tri-hanggoro-a46a88227/)                    |
+| M Dicky Desriansyah                | Universitas Dharma Andalas       | ML      | [LinkedIn](https://www.linkedin.com/in/m-dicky-desriansyah-23a79b2aa/)                    |
 | Aji Maulana                        | Politeknik Pratama Mulia          | ML            | [LinkedIn](https://www.linkedin.com/in/aji-maulana-0bb20921b)                    |
 | Seva Nonda Farkhan Syah            | Universitas Gunadarma             | ML            | [LinkedIn](https://www.linkedin.com/in/seva-nonda-farkhan-syah-0ab311247/)                    |
 | Zahra Areefa Ananta                | Institut Teknologi Sumatera       | ML            | [LinkedIn](https://www.linkedin.com/in/zahra-areefa-ananta-28566124b/)                    |
