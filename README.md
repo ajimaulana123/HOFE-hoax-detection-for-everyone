@@ -49,8 +49,4 @@
 
 ## 📝 License  
 
-This project is licensed under the [MIT License](LICENSE).  
-
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-![License](https://img.shields.io/badge/license-MIT-blue)
-![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-orange)
+This project is licensed under the [MIT License](LICENSE).
