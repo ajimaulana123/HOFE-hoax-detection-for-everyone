@@ -1,6 +1,6 @@
-![animation-mockup](https://github.com/user-attachments/assets/bc2f6a39-b6dd-4394-8988-5ef7c8c982e2)# HOFE (Hoax Detection For Everyone) 🕵️‍♂️
+# HOFE (Hoax Detection For Everyone) 🕵️‍♂️
 
-![Mockoup](animation-mockup.gif)
+<img src="animation-mockup.gif" width="100%" />
 
 HOFE is a hoax detection application designed to tackle **misinformation** 📰 in **Indonesia** 🇮🇩. Powered by **machine learning technology** 🤖, this app helps identify false news automatically 🎯 and accurately by analyzing relevant **linguistic features** 📚 and **contextual information** 🧠.
 
