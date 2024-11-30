@@ -1,6 +1,6 @@
 # HOFE ( Hoax Detection For Everyone )
 
-> Need image
+![Mockoup](Mockup.png)
 
 ## Background
 
