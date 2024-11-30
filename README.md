@@ -2,15 +2,7 @@
 
 ![Mockoup](Mockup.png)
 
-## 📖 Background
-
-Our project seeks to develop a **Hoax Detection application**, targeting the critical challenge of **misinformation** 📰 that pervades Indonesian media landscapes. Our problem statement focuses on the need for an **automated** 🤖 and **intelligent application** capable of detecting and reducing the spread of misinformation, which increasingly threatens **social harmony** 🤝 and **public trust** in vital areas such as **health** 🏥 and **governance** 🏛️. 
-
-Although there are already similar applications available, we aim to achieve a **highly reliable hoax detection accuracy** 🎯. Through our **research questions**, we aim to determine the efficacy of **machine learning algorithms** in detecting hoaxes in real time and to identify key **linguistic** 📚 and **contextual features** 🧠 that distinguish misinformation. Additionally, we investigate the broader implications of hoaxes on **public opinion** 💭 and **decision-making**.
-
-In terms of background, **Indonesia** 🇮🇩 is witnessing a surge in hoaxes, with studies showing that a large portion of the population is exposed to **false information**, primarily through **news articles** 📰. This unchecked spread has spurred **public uncertainty** 😟 and, in some cases, **social unrest**—particularly around **health crises** like **COVID-19** 🦠 and **sensitive political events**.
-
-This tool will empower individuals to distinguish between **truth** ✅ and **falsehood** ❌, promoting **informed public discourse**, bolstering confidence in credible news sources, and contributing to a **well-informed society** 🌍. This initiative reflects our commitment to addressing the **misinformation crisis** 🚨 and to advancing **media literacy** through actionable technology.
+HOFE is a hoax detection application designed to tackle **misinformation** 📰 in **Indonesia** 🇮🇩. Powered by **machine learning technology** 🤖, this app helps identify false news automatically 🎯 and accurately by analyzing relevant **linguistic features** 📚 and **contextual information** 🧠.
 
 ---
 
