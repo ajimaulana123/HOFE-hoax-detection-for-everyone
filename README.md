@@ -33,9 +33,10 @@
 | Ardhian Jaya Wibawa           | Politeknik Pratama Mulia    | ML 🧠         | [LinkedIn](https://www.linkedin.com/in/ardhian-jaya/) |  
 | M Dicky Desriansyah           | Universitas Dharma Andalas  | ML 🧠         | [LinkedIn](https://www.linkedin.com/in/m-dicky-desriansyah-23a79b2aa/) |  
 | Aji Maulana                   | Politeknik Pratama Mulia    | ML 🧠         | [LinkedIn](https://www.linkedin.com/in/aji-maulana-0bb20921b) |  
-| Seva Nonda Farkhan Syah       | Universitas Gunadarma       | ML 🧠         | [LinkedIn](https://www.linkedin.com/in/seva-nonda-farkhan-syah-0ab311247/) |  
-| Zahra Areefa Ananta           | Institut Teknologi Sumatera | ML 🧠         | [LinkedIn](https://www.linkedin.com/in/zahra-areefa-ananta-28566124b/) |  
-| Bani Adam Tampubolon          | Institut Teknologi Sumatera | ML 🧠         | [LinkedIn](https://www.linkedin.com/in/baniadamtampubolon) |  
+| Fadillah Ryan Rafiqi          | Politeknik Pratama Mulia    | CC 🧠         | [LinkedIn](https://www.linkedin.com/in/) |  
+| Agung Prasetyo                | STIMIK Tunas Bangsa Banjarnegara | CC 🧠    | [LinkedIn](https://www.linkedin.com/in/) |  
+| Ilham                         | Universitas Andalas         | MD 🧠         | [LinkedIn](https://www.linkedin.com/in/) |  
+| Drin Marsal Albari            | Universitas Riau            | MD 🧠         | [LinkedIn](https://www.linkedin.com/in/) |  
 
 ---
 
