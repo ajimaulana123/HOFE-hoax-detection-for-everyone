@@ -35,7 +35,7 @@
 | Aji Maulana                   | Politeknik Pratama Mulia    | ML 🧠         | [LinkedIn](https://www.linkedin.com/in/aji-maulana-0bb20921b) |  
 | Fadillah Ryan Rafiqi          | Politeknik Pratama Mulia    | CC 🧠         | [LinkedIn](https://www.linkedin.com/in/) |  
 | Agung Prasetyo                | STIMIK Tunas Bangsa Banjarnegara | CC 🧠    | [LinkedIn](https://www.linkedin.com/in/) |  
-| Ilham                         | Universitas Andalas         | MD 🧠         | [LinkedIn](https://www.linkedin.com/in/) |  
+| Ilham                         | Universitas Andalas         | MD 🧠         | [LinkedIn](www.linkedin.com/in/ilham-‎-29857b249) |  
 | Drin Marsal Albari            | Universitas Riau            | MD 🧠         | [LinkedIn](https://www.linkedin.com/in/) |  
 
 ---
