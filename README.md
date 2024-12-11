@@ -10,8 +10,6 @@ https://github.com/user-attachments/assets/f42747f6-5e52-4b2f-8d9e-d3df8b5226f3
 
 
 
-![DemoAPP](DemoApp.mp4)
-
 ---
 ## 🌟 Main Features  
 
