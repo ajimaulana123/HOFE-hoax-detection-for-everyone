@@ -6,9 +6,7 @@
 
 Here’s a quick demo of our app in action:  
 
-<iframe src="https://drive.google.com/file/d/1POaqbtHWedN68zPnckyzTVPP_ch39hlr/preview" width="100%" height="480"
-    allow="autoplay; encrypted-media">
-</iframe>
+<video src="https://drive.google.com/file/d/1POaqbtHWedN68zPnckyzTVPP_ch39hlr/preview" width="640" height="480" allow="autoplay"></video>
 
 ---
 
