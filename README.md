@@ -1,5 +1,7 @@
 # HOFE (Hoax Detection For Everyone) 🕵️‍♂️  
 
+<img src="animation-mockup.gif" width="100%" />  
+
 ## 🎥 Demo  
 
 Here’s a quick demo of our app in action:  
@@ -38,7 +40,7 @@ Here’s a quick demo of our app in action:
 | Fadillah Ryan Rafiqi          | Politeknik Pratama Mulia    | CC 🧠         | [LinkedIn](https://www.linkedin.com/in/) |  
 | Agung Prasetyo                | STIMIK Tunas Bangsa Banjarnegara | CC 🧠    | [LinkedIn](https://www.linkedin.com/in/) |  
 | Ilham                         | Universitas Andalas         | MD 🧠         | [LinkedIn](https://www.linkedin.com/in/ilham-‎-29857b249) |  
-| Drin Marsal Albari            | Universitas Riau            | MD 🧠         | [LinkedIn](https://www.linkedin.com/in/) |  
+| Drin Marsal Albari            | Universitas Riau            | MD 🧠         | [LinkedIn](https://www.linkedin.com/in/drin-marsal-a4a000332/) |  
 
 ---
 
