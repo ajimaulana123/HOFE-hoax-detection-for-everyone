@@ -4,11 +4,10 @@
 
 ## 🎥 Demo  
 
-Here’s a quick demo of our app in action:  
+Here’s a quick demo of our app in action:
 
-
----
 [![Watch the video](DemoApp.mp4)
+---
 ## 🌟 Main Features  
 
 1. **News Prediction** 🔮  
