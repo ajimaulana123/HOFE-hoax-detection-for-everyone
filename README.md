@@ -6,7 +6,7 @@
 
 Here’s a quick demo of our app in action:
 
-[![Watch the video](DemoApp.mp4)
+![Watch the video](DemoApp.mp4)
 ---
 ## 🌟 Main Features  
 
