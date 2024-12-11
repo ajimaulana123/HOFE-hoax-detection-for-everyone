@@ -6,8 +6,7 @@
 
 Here’s a quick demo of our app in action:  
 
-<video src="https://drive.google.com/file/d/1POaqbtHWedN68zPnckyzTVPP_ch39hlr/preview" width="640" height="480" allow="autoplay"></video>
-
+<iframe src="https://drive.google.com/file/d/1POaqbtHWedN68zPnckyzTVPP_ch39hlr/preview" width="640" height="480" allow="autoplay"></iframe>
 ---
 
 ## 🌟 Main Features  
