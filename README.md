@@ -1,10 +1,12 @@
 # HOFE (Hoax Detection For Everyone) 🕵️‍♂️  
 
-> NEED DEMO APP
+## 🎥 Demo  
 
-<img src="animation-mockup.gif" width="100%" />  
+Here’s a quick demo of our app in action:  
 
-**HOFE** is a hoax detection application designed to address **misinformation** 📰 in **Indonesia** 🇮🇩. Powered by **machine learning technology** 🤖, HOFE analyzes **linguistic features** 📚 and **context** 🧠 to automatically and accurately detect false news 🎯.  
+<iframe src="https://drive.google.com/file/d/1POaqbtHWedN68zPnckyzTVPP_ch39hlr/preview" width="100%" height="480"
+    allow="autoplay">
+</iframe>
 
 ---
 
