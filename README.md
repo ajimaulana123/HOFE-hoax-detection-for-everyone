@@ -6,9 +6,9 @@
 
 Here’s a quick demo of our app in action:  
 
-![Video Title](DemoApp.mp4)
----
 
+---
+[![Watch the video](DemoApp.mp4)
 ## 🌟 Main Features  
 
 1. **News Prediction** 🔮  
