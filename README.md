@@ -39,9 +39,9 @@ curl -X POST <our-api>/api/auth/login \
 
 > GET /api/auth/logout
 
-- **Headers**
-    
-    Authorization: your_jwt_token_here
+**Headers**
+
+* Authorization: your_jwt_token_here
 
 **Response Body**
 
@@ -63,9 +63,9 @@ curl -X GET https://<our-api>/api/auth/logout -H "Authorization: your_jwt_token_
 
 > GET /api/news
 
-- **Headers**
-    
-    Authorization: your_jwt_token_here
+**Headers**
+
+* Authorization: your_jwt_token_here
 
 **Response Body**
 
@@ -97,9 +97,9 @@ curl -X GET https://<our-api>/api/news -H "Authorization: Bearer <your_access_to
 
 > POST /api/news/predict/text
 
-- **Headers**
-    
-    Authorization: your_jwt_token_here
+**Headers**
+
+* Authorization: your_jwt_token_here
 
 **Request Body**
 
@@ -124,9 +124,9 @@ curl -X POST https://<our-api>/api/news/predict/text -H "Authorization: Bearer <
 
 > POST /api/news/predict/url
 
-- **Headers**
-    
-    Authorization: your_jwt_token_here
+**Headers**
+
+* Authorization: your_jwt_token_here
 
 **Request Body**
 
@@ -156,9 +156,9 @@ curl -X POST https://<our-api>/api/news/predict/url \
 
 > GET /api/user/profile
 
-- **Headers**
-    
-    Authorization: your_jwt_token_here
+**Headers**
+
+* Authorization: your_jwt_token_here
 
 **Response Body**
 
