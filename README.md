@@ -1,6 +1,6 @@
 # HOFE - Hoax Detection For Everyone
 
-> HOFE API untuk mendeteksi berita hoax
+> HOFE API to detect hoax news
 
 ### Endpoints
 
