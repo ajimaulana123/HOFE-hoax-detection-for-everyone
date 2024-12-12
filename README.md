@@ -1,14 +1,10 @@
 # HOFE (Hoax Detection For Everyone) 🕵️‍♂️  
 
-<img src="animation-mockup.gif" width="100%" />  
-
 ## 🎥 Demo  
 
 Here’s a quick demo of our app in action:
 
 https://github.com/user-attachments/assets/f42747f6-5e52-4b2f-8d9e-d3df8b5226f3
-
-
 
 ---
 ## 🌟 Main Features  
