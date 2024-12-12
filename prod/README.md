@@ -4,6 +4,10 @@
 
 This API provides interfaces for registering, logging in, logging out, and verifying whether news is fake or not. Users can access the latest hoax news information and make predictions on specific news articles using their URLs. To access all endpoints, users must have a valid access token.
 
+## Domain
+
+>  [https://api-cc-hofe-cloud-run-github-actions-353977310580.asia-southeast2.run.app](https://api-cc-hofe-cloud-run-github-actions-353977310580.asia-southeast2.run.app)
+
 ## Endpoints
 
 ### User Login
@@ -28,7 +32,7 @@ This API provides interfaces for registering, logging in, logging out, and verif
 
 #### Example use with cURL:
 ```bash
-curl -X POST https://[our-api]/api/auth/login \
+curl -X POST https://api-cc-hofe-cloud-run-github-actions-353977310580.asia-southeast2.run.app/api/auth/login \
   -H "Content-Type: application/json" \
   -d '{
     "email": "johndoe@example.com",
@@ -66,7 +70,7 @@ curl -X POST https://[our-api]/api/auth/login \
 
 #### Example use with cURL:
 ```bash
-curl -X POST https://[our-api]/api/auth/register \
+curl -X POST https://api-cc-hofe-production.up.railway.app/api/auth/register \
   -H "Content-Type: application/json" \
   -d '{
     "username": "johndoe",
@@ -86,7 +90,7 @@ curl -X POST https://[our-api]/api/auth/register \
 
 #### Example use with cURL:
 ```bash
-curl -X GET https://[our-api]/api/auth/logout -H "Authorization: your_jwt_token_here"
+curl -X GET https://api-cc-hofe-cloud-run-github-actions-353977310580.asia-southeast2.run.app/api/auth/logout -H "Authorization: your_jwt_token_here"
 ```
 
 ---
@@ -117,7 +121,7 @@ Retrieve news categorized as hoax.
 
 #### Example use with cURL:
 ```bash
-curl -X GET https://[our-api]/api/news -H "Authorization: Bearer <your_access_token>"
+curl -X GET https://api-cc-hofe-cloud-run-github-actions-353977310580.asia-southeast2.run.app/api/news -H "Authorization: Bearer <your_access_token>"
 ```
 
 ---
@@ -149,7 +153,7 @@ Make a prediction on whether the news is a hoax or not.
 
 #### Example use with cURL:
 ```bash
-curl -X POST https://[our-api]/api/news/predict \
+curl -X POST https://api-cc-hofe-cloud-run-github-actions-353977310580.asia-southeast2.run.app/api/news/predict \
   -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NDM0Nzk4YTYyMTBiODcwOGEwYzI5NCIsInVzZXJuYW1lIjoiYWppbWF1bGFuYSIsImlhdCI6MTczMjQ2MjU3NCwiZXhwIjoxNzMyNDY2MTc0fQ.Smp5K2xeAv_7n3803Wnk4Sd-KeMLrWQI0yRoSfF-5Rc" \
   -H "Content-Type: application/json" \
   -d '{"url": "news-url"}'
@@ -173,5 +177,5 @@ curl -X POST https://[our-api]/api/news/predict \
 
 #### Example use with cURL:
 ```bash
-curl -X GET https://[our-api]/api/user/profile -H "Authorization: Bearer <your_access_token>"
+curl -X GET https://api-cc-hofe-cloud-run-github-actions-353977310580.asia-southeast2.run.app/api/user/profile -H "Authorization: Bearer <your_access_token>"
 ```
