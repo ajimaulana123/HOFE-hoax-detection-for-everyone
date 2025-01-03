@@ -1,5 +1,7 @@
 # HOFE (Hoax Detection For Everyone) 🕵️‍♂️  
 
+U can download here: [hofe.apk](https://drive.usercontent.google.com/download?id=1KYztqitE9FVHS5PBQSyqLioxCD9XBKN6&export=download)
+
 ## 🎥 Demo  
 
 Here’s a quick demo of our app in action:
