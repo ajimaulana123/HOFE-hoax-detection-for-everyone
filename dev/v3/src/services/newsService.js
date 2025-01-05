@@ -111,17 +111,6 @@ const checkNewsForHoaxByUrl = async (payload) => {
     .replace(/[^\w\s]/g, "")
     .replace(/\s+/g, " ")
     .trim();
-
-    // Hitung jumlah kata
-  const wordCount = cleanText.split(/\s+/).length;
-
-  // Validasi jumlah kata
-  if (wordCount < 200) {
-    throw new Error(
-      "Konten berita terlalu singkat (kurang dari 200 kata). Link berita tidak didukung."
-    );
-  }
-                    
   const predictionResults = await fetchPrediction(cleanText);
   return { prediction: predictionResults[0].prediction, text: cleanText };
 };
@@ -129,19 +118,11 @@ const checkNewsForHoaxByUrl = async (payload) => {
 const getAllNews = async (baseUrl) => {
   const $ = await fetchNewsFromUrl(baseUrl);
 
-  let latestOptionUrl = '';
-  
-        $('select option').each((index, element) => {
-            const value = $(element).attr('value');
-            if (value && !latestOptionUrl) {
-                latestOptionUrl = value; // Ambil URL terbaru (indeks pertama)
-            }
-        });
-
-
+  const latestOptionUrl = $("select option").first().attr("value");
   if (!latestOptionUrl) {
     throw new Error("No latest URL found");
   }
+
   const $$ = await fetchNewsFromUrl(latestOptionUrl);
   const articles = [];
   $$("article").each((index, element) => {

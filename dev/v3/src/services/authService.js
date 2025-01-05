@@ -52,11 +52,9 @@ const loginUser = async (email, password) => {
     throw new Error("Email atau password salah");
   }
 
-  console.log(user.id)
-
   // Create JWT token
   const token = jwt.sign(
-    { id: user.id, username: user.username },
+    { id: user._id, username: user.username },
     SECRET_KEY,
     { expiresIn: "7d" }
   );

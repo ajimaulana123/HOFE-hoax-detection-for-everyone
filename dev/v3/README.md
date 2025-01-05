@@ -6,7 +6,7 @@ This API provides interfaces for registering, logging in, logging out, and verif
 
 ## Domain
 
->  [https://api-cc-hofe-cloud-run-github-actions-353977310580.asia-southeast2.run.app](https://api-cc-hofe-cloud-run-github-actions-353977310580.asia-southeast2.run.app)
+> [<our-api>](<our-api>)
 
 ## Endpoints
 
@@ -32,7 +32,7 @@ This API provides interfaces for registering, logging in, logging out, and verif
 
 #### Example use with cURL:
 ```bash
-curl -X POST https://api-cc-hofe-cloud-run-github-actions-353977310580.asia-southeast2.run.app/api/auth/login \
+curl -X POST <our-api>api/auth/login \
   -H "Content-Type: application/json" \
   -d '{
     "email": "johndoe@example.com",
@@ -70,7 +70,7 @@ curl -X POST https://api-cc-hofe-cloud-run-github-actions-353977310580.asia-sout
 
 #### Example use with cURL:
 ```bash
-curl -X POST https://api-cc-hofe-production.up.railway.app/api/auth/register \
+curl -X POST <our-api>api/auth/register \
   -H "Content-Type: application/json" \
   -d '{
     "username": "johndoe",
@@ -90,7 +90,7 @@ curl -X POST https://api-cc-hofe-production.up.railway.app/api/auth/register \
 
 #### Example use with cURL:
 ```bash
-curl -X GET https://api-cc-hofe-cloud-run-github-actions-353977310580.asia-southeast2.run.app/api/auth/logout -H "Authorization: your_jwt_token_here"
+curl -X GET <our-api>api/auth/logout -H "Authorization: your_jwt_token_here"
 ```
 
 ---
@@ -121,16 +121,47 @@ Retrieve news categorized as hoax.
 
 #### Example use with cURL:
 ```bash
-curl -X GET https://api-cc-hofe-cloud-run-github-actions-353977310580.asia-southeast2.run.app/api/news -H "Authorization: Bearer <your_access_token>"
+curl -X GET <our-api>api/news -H "Authorization: Bearer <your_access_token>"
 ```
 
 ---
 
-### Predict News
+### Predict News 
 
-> **POST** `/api/news/predict`
+> **POST** `/api/news/predict/text`
 
-Make a prediction on whether the news is a hoax or not.
+Make a prediction on whether the news is a hoax or not with **text news**.
+
+#### Headers
+- `Authorization`: `Bearer <your_access_token>` (token from login)
+
+#### Request Body
+```json
+{
+  "text": "string"  // URL of the news to be predicted
+}
+```
+
+#### Response Body
+```json
+{
+  "statusCode": 200,
+  "prediction": "Valid",  // or "Invalid" for hoax news
+  "text": "example news text"
+}
+```
+
+#### Example use with cURL:
+```bash
+curl -X POST <our-api>api/news/predict \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NDM0Nzk4YTYyMTBiODcwOGEwYzI5NCIsInVzZXJuYW1lIjoiYWppbWF1bGFuYSIsImlhdCI6MTczMjQ2MjU3NCwiZXhwIjoxNzMyNDY2MTc0fQ.Smp5K2xeAv_7n3803Wnk4Sd-KeMLrWQI0yRoSfF-5Rc" \
+  -H "Content-Type: application/json" \
+  -d '{"text": "news-text"}'
+```
+
+> **POST** `/api/news/predict/url`
+
+Make a prediction on whether the news is a hoax or not with **url news**.
 
 #### Headers
 - `Authorization`: `Bearer <your_access_token>` (token from login)
@@ -153,7 +184,7 @@ Make a prediction on whether the news is a hoax or not.
 
 #### Example use with cURL:
 ```bash
-curl -X POST https://api-cc-hofe-cloud-run-github-actions-353977310580.asia-southeast2.run.app/api/news/predict \
+curl -X POST <our-api>api/news/predict \
   -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NDM0Nzk4YTYyMTBiODcwOGEwYzI5NCIsInVzZXJuYW1lIjoiYWppbWF1bGFuYSIsImlhdCI6MTczMjQ2MjU3NCwiZXhwIjoxNzMyNDY2MTc0fQ.Smp5K2xeAv_7n3803Wnk4Sd-KeMLrWQI0yRoSfF-5Rc" \
   -H "Content-Type: application/json" \
   -d '{"url": "news-url"}'
@@ -171,11 +202,12 @@ curl -X POST https://api-cc-hofe-cloud-run-github-actions-353977310580.asia-sout
 #### Response Body
 ```json
 {
-  "is": "empty!"
+  "username": "your_username",
+  "email": "your_email@example.com"
 }
 ```
 
 #### Example use with cURL:
 ```bash
-curl -X GET https://api-cc-hofe-cloud-run-github-actions-353977310580.asia-southeast2.run.app/api/user/profile -H "Authorization: Bearer <your_access_token>"
+curl -X GET <our-api>api/user/profile -H "Authorization: Bearer <your_access_token>"
 ```

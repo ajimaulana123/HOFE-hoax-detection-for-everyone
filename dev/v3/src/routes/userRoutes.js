@@ -1,26 +1,22 @@
 // newsRoutes.js
 import express from "express";
 import { authenticateToken } from '../middleware/auth.js';
-// repository/userRepository.js
-import { db } from "./../database/firestoreDb.js";
+import User from '../models/userModel.js';
 
 const router = express.Router();
 
 // Endpoint untuk melihat profil pengguna
 router.get('/profile', authenticateToken, async (req, res) => {
   try {
+    // Ambil ID pengguna dari token yang sudah terverifikasi
     const userId = req.user.id;
 
-    const userRef = db.collection("users").doc(userId);
-    
-    const userDoc = await userRef.get();
+    // Cari pengguna berdasarkan ID
+    const user = await User.findById(userId).select('-password'); // Hapus field password dari respons
 
-    if (!userDoc.exists) {
-      return res.status(404).json({ message: "Pengguna tidak ditemukan" });
+    if (!user) {
+      return res.status(404).json({ message: 'Pengguna tidak ditemukan' });
     }
-
-    // Ambil data pengguna dan hapus password sebelum mengirim respons
-    const user = userDoc.data();
 
     // Kirimkan data profil pengguna
     res.status(200).json({

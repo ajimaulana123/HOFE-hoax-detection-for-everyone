@@ -2,6 +2,9 @@ import express from "express";
 import morgan from "morgan";
 import cors from "cors";
 import bodyParser from "body-parser";
+import fs from "fs";
+import path from "path";
+import { marked } from "marked"; // Menggunakan marked untuk konversi markdown ke HTML
 import newsRoutes from "./routes/newsRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
@@ -28,7 +31,20 @@ const createApp = () => {
 
   // Setup routes
   app.get("/", (req, res) => {
-    res.send("Hello World!");
+    const readmePath = path.resolve("README.md");
+
+    // Membaca file README.md
+    fs.readFile(readmePath, "utf-8", (err, data) => {
+      if (err) {
+        return res.status(500).json({ message: "Error reading README.md" });
+      }
+
+      // Mengonversi konten Markdown ke HTML (optional)
+      const htmlContent = marked(data);
+
+      // Mengirimkan HTML ke client
+      res.send(htmlContent);
+    });
   });
 
   app.use("/api/news", newsRoutes);

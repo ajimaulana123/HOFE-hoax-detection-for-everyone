@@ -34,11 +34,11 @@ const handleGetAllNews = [
   async (req, res) => {
     try {
       const baseUrl = "https://turnbackhoax.id/";
-      const articles = await getAllNews(baseUrl);
+    const articles = await getAllNews(baseUrl);
     res.json(articles);
-    } catch (error) {
-      res.status(500).json({ error: error.message });
-    }
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
   },
 ];
 
@@ -47,3 +47,4 @@ export {
   handleCheckNewsForHoaxByUrl,
   handleGetAllNews,
 };
+
