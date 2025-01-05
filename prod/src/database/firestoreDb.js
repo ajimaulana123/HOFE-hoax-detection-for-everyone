@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Menggunakan path absolut
-const serviceAccountPath = path.resolve(__dirname, "../config/<credential_firestore>.json");
+const serviceAccountPath = path.resolve(__dirname, "../config/credential_firestore.json");
 
 let db = null; // Variabel untuk menyimpan instance Firestore
 let isConnected = false; // Variabel untuk melacak status koneksi

@@ -2,9 +2,9 @@
   "name": "hofe-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "npm run ./src/index",
+    "start": "node src/index",
     "dev": "nodemon ./src/index",
     "migrate": "node-pg-migrate"
   },
@@ -33,6 +33,7 @@
     "express": "^4.21.1",
     "firebase-admin": "^13.0.1",
     "jsonwebtoken": "^9.0.2",
+    "marked": "^15.0.5",
     "mongoose": "^8.8.2",
     "morgan": "^1.10.0",
     "nanoid": "^5.0.9"
