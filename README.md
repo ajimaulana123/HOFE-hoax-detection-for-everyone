@@ -26,6 +26,11 @@ The **HOFE** model achieves strong performance in distinguishing fake news from 
 
 ---
 
+### If you .ipynb file, this how to install libraries
+```python
+pip install pandas matplotlib numpy tensorflow scikit-learn seaborn
+```
+
 ### API Implementation for News Classification
 
 To integrate the **HOFE** model into an application or service, you can use the following API to make predictions based on a given news article. The API accepts the text of a news article and returns a prediction on whether the news is a hoax or real.
